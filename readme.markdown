@@ -1,24 +1,24 @@
-# bevacqua
+# joshhunt
 
-> Nicolas Bevacqua
+> Josh Hunt
 
 # install
 
 As a `postinstall` script.
 
 ```bash
-npm install bevacqua
+npm install joshhunt
 ```
 
 As a JSON object.
 
 ```js
-console.log(require('bevacqua'));
+console.log(require('joshhunt'));
 ```
 
 # credits
 
-[@johnkpaul](https://github.com/johnkpaul/johnkpaul)
+[@johnkpaul](https://github.com/johnkpaul/johnkpaul) and [@bevacqua](https://github.com/bevacqua/bevacqua)
 
 # license
 
