@@ -1,15 +1,17 @@
 {
-  "name": "joshhunt",
+  "name": "netux",
   "version": "1.0.0",
-  "description": "Josh Hunt",
-  "author": "Josh Hunt",
+  "description": "Martín \"Netux\" Rodriguez",
+  "author": "Martín \"Netux\" Rodriguez",
   "main": "./index.json",
   "scripts": {
     "postinstall": "cat index.json"
   },
   "keywords": [
     "person",
-    "contact"
+    "contact",
+    "self",
+    "info"
   ],
   "license": "MIT"
 }
