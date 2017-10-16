@@ -10,33 +10,33 @@
   },
   "website": "https://netux.site",
   "contact": {
-    "email": "send.me.an.email@netux.site",
-    "social": {
-      "github": {
-        "service-name": "GitHub",
-        "profile-url": "https://github.com/Netox005",
-        "username": "Netox005"
-      },
-      "gitlab": {
-        "service-name": "GitLab",
-        "profile-url": "https://gitlab.com/netux",
-        "username": "netux"
-      },
-      "reddit": {
-        "service-name": "Reddit",
-        "profile-url": "https://reddit.com/user/Netux055",
-        "username": "Netux055"
-      },
-      "codepen": {
-        "service-name": "Codepen",
-        "profile-url": "https://codepen.io/netux",
-        "username": "netux"
-      },
-      "glitch": {
-        "service-name": "Glitch",
-        "profile-url": "https://glitch.com/@Netox005",
-        "username": "Netox005"
-      }
+    "email": "send.me.an.email@netux.site"
+  },
+  "social": {
+    "github": {
+      "service-name": "GitHub",
+      "profile-url": "https://github.com/Netox005",
+      "username": "Netox005"
+    },
+    "gitlab": {
+      "service-name": "GitLab",
+      "profile-url": "https://gitlab.com/netux",
+      "username": "netux"
+    },
+    "reddit": {
+      "service-name": "Reddit",
+      "profile-url": "https://reddit.com/user/Netux055",
+      "username": "Netux055"
+    },
+    "codepen": {
+      "service-name": "Codepen",
+      "profile-url": "https://codepen.io/netux",
+      "username": "netux"
+    },
+    "glitch": {
+      "service-name": "Glitch",
+      "profile-url": "https://glitch.com/@Netox005",
+      "username": "Netox005"
     }
   }
 }
