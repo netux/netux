@@ -37,6 +37,11 @@
       "service-name": "Glitch",
       "profile-url": "https://glitch.com/@Netox005",
       "username": "Netox005"
+    },
+    "aboutme": {
+      "service-name": "about.me",
+      "profile-url": "https://about.me/netux",
+      "username": "netux"
     }
   }
 }
