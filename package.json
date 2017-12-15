@@ -3,9 +3,11 @@
   "version": "1.2.0",
   "description": "Martín \"Netux\" Rodriguez",
   "author": "Martín \"Netux\" Rodriguez",
-  "main": "./index.json",
+  "main": "./dist/index.json",
   "scripts": {
-    "postinstall": "cat index.json"
+    "postinstall": "cat ./dist/index.json",
+    "prepare": "npm run build",
+    "build": "rm -rf ./dist && node bundler.js"
   },
   "keywords": [
     "person",
