@@ -5,8 +5,8 @@
   "author": "Martín \"Netux\" Rodriguez",
   "main": "./dist/index.json",
   "scripts": {
+    "prepublish": "npm run build",
     "postinstall": "cat ./dist/index.json",
-    "prepare": "npm run build",
     "build": "rm -rf ./dist && node bundler.js"
   },
   "keywords": [
