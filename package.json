@@ -4,6 +4,7 @@
   "description": "Martín \"Netux\" Rodriguez",
   "author": "Martín \"Netux\" Rodriguez",
   "main": "./dist/index.json",
+  "typings": "./typings/index.d.ts",
   "scripts": {
     "prepublish": "npm run build",
     "postinstall": "cat ./dist/index.json",
