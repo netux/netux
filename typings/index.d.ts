@@ -35,7 +35,7 @@ declare module 'netux' {
   }
 
   export const contact: {
-    email: string
+    email: string[]
   }
 
   export const birthday: {
