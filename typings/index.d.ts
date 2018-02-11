@@ -15,13 +15,13 @@ declare module 'netux' {
   }
 
   export interface SocialProfile {
+    id?: string
+    username: string,
     'service-name': string,
     /**
      * Includes username
      */
     'profile-url': string,
-    username: string,
-    id?: string
   }
 
 
@@ -35,7 +35,12 @@ declare module 'netux' {
   }
 
   export const contact: {
-    email: string[]
+    email: string[],
+    discord: {
+      id: string,
+      username: string,
+      discriminator: string
+    }
   }
 
   export const birthday: {
