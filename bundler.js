@@ -16,13 +16,22 @@ function directoryToJson (path) {
     const pathStats = FileSystem.statSync(filePath)
     const fileNameNoExt = fileName.replace(/\..+$/, '')
     
-    if (pathStats.isDirectory()) {
-      result[fileNameNoExt] = directoryToJson(filePath)
-    } else if (pathStats.isFile()) {
-      const contents = FileSystem.readFileSync(filePath, 'utf8')
-      const jsonContents = JSON.parse(contents)
+    if (result.hasOwnProperty(fileNameNoExt)) {
+      const errorMsg = [
+        `${ fileName } overwrites a previously set \`${ fileNameNoExt }\` property.`,
+        `Remove ${ Path.resolve(path, fileNameNoExt) } or ${ Path.resolve(fileName === fileNameNoExt ? `${ fileName }.json` : fileName) } and rebuild.`
+      ]
 
-      result[fileNameNoExt] = jsonContents
+      throw new Error(errorMsg.join('\n'))
+    } else {
+      if (pathStats.isDirectory()) {
+        result[fileNameNoExt] = directoryToJson(filePath)
+      } else if (pathStats.isFile()) {
+        const contents = FileSystem.readFileSync(filePath, 'utf8')
+        const jsonContents = JSON.parse(contents)
+
+        result[fileNameNoExt] = jsonContents
+      }
     }
   }
 
