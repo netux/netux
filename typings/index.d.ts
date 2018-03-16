@@ -34,6 +34,15 @@ declare module 'netux' {
     last: string
   }
 
+  export const gender: string
+
+  export const sex: string
+
+  export const work: {
+    studying: boolean,
+    at: string
+  }
+
   export const contact: {
     email: string[],
     discord: {
