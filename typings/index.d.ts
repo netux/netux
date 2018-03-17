@@ -14,6 +14,19 @@ declare module 'netux' {
     December
   }
 
+  export enum Sex {
+    Male = 'Male',
+    Female = 'Female'
+  }
+
+  export enum Gender {
+    Male = 'Male',
+    Female = 'Female',
+    AttackHelicopter = 'Attack Helicopter',
+    NoBinary = 'No Binary',
+    Other = 'Other'
+  }
+
   export interface SocialProfile {
     id?: string
     username: string,
@@ -34,9 +47,9 @@ declare module 'netux' {
     last: string
   }
 
-  export const gender: string
-
-  export const sex: string
+  export const sex: Sex
+  
+  export const gender: Gender
 
   export const work: {
     studying: boolean,
