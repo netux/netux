@@ -1,0 +1,21 @@
+[
+  {
+    "types": [
+      "Elementary",
+      "Secondary"
+    ],
+    "since": {
+      "year": 2003,
+      "level": "Green (Elementary)"
+    }
+  },
+  {
+    "types": [
+      "Secondary"
+    ],
+    "since": {
+      "year": 2011,
+      "level": "5th Grade"
+    }
+  }
+]

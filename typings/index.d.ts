@@ -27,12 +27,28 @@ declare module 'netux' {
     Other = 'Other'
   }
 
+  export enum EducativeInstitutionType {
+    Elementary = 'Elementary',
+    Secondary = 'Secondary',
+    University = 'University'
+  }
+
   export interface Date {
     day: number,
     month: Month,
     year: number
   }
 
+  export interface EducationProfile {
+    building?: string,
+    through: EducativeInstitutionType[],
+    since: Partial<Date> & { level: string }
+  }
+
+  export interface JobProfile {
+    building?: string,
+    role?: string,
+    since: Partial<Date>
   }
 
   export interface SocialProfile {
@@ -59,7 +75,7 @@ declare module 'netux' {
     sex: Sex,
     gender: Gender
   }
-  
+
   export const education: EducationProfile[]
 
   export const jobs: JobProfile[]
