@@ -27,6 +27,14 @@ declare module 'netux' {
     Other = 'Other'
   }
 
+  export interface Date {
+    day: number,
+    month: Month,
+    year: number
+  }
+
+  }
+
   export interface SocialProfile {
     id?: string
     username: string,
@@ -65,11 +73,7 @@ declare module 'netux' {
     }
   }
 
-  export const birthday: {
-    day: number,
-    month: Month,
-    year?: number
-  }
+  export const birthday: Partial<Date>
 
   export const social: {
     [ serviceId: string ]: SocialProfile
