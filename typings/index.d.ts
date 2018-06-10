@@ -47,14 +47,14 @@ declare module 'netux' {
     last: string
   }
 
-  export const sex: Sex
-  
-  export const gender: Gender
-
-  export const work: {
-    studying: boolean,
-    at: string
+  export const sexual_orientation: {
+    sex: Sex,
+    gender: Gender
   }
+  
+  export const education: EducationProfile[]
+
+  export const jobs: JobProfile[]
 
   export const contact: {
     email: string[],
