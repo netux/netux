@@ -30,11 +30,11 @@ declare module 'netux' {
   export interface SocialProfile {
     id?: string
     username: string,
-    'service-name': string,
+    'service_name': string,
     /**
      * Includes username
      */
-    'profile-url': string,
+    'profile_url': string,
   }
 
 

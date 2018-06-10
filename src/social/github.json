@@ -1,5 +1,5 @@
 {
-  "service-name": "GitHub",
-  "profile-url": "https://github.com/netux",
+  "service_name": "GitHub",
+  "profile_url": "https://github.com/netux",
   "username": "netux"
 }
