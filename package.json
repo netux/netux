@@ -6,7 +6,7 @@
   "main": "./dist/index.json",
   "typings": "./typings/index.d.ts",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "postinstall": "cat ./dist/index.json",
     "build": "rm -rf ./dist && node bundler.js"
   },
