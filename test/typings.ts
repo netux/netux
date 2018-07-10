@@ -1,8 +1,6 @@
 import * as moi from 'netux'
 
 
-console.log(moi)
-
 const pronoun = {
   subject: moi.sexual_orientation.sex == moi.Sex.Male ? 'he' : 'she',
   object: moi.sexual_orientation.sex == moi.Sex.Male ? 'him' : 'her'
