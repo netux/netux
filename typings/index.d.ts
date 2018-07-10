@@ -71,6 +71,11 @@ declare module 'netux' {
     last: string
   }
 
+  /**
+   * Locale codes (e.g. "en", "es-AR")
+   */
+  export const languages: string[]
+
   export const sexual_orientation: {
     sex: Sex,
     gender: Gender
