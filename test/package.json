@@ -1,0 +1,14 @@
+{
+  "name": "netux_test",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "ts-node": "^6.1.0",
+    "typescript": "^2.9.1"
+  },
+  "scripts": {
+    "test-typings": "ts-node ./typings.ts",
+    "update": "bash update.sh"
+  }
+}
