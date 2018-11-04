@@ -51,14 +51,23 @@ declare module 'netux' {
     since: Partial<Date>
   }
 
-  export interface SocialProfile {
-    id?: string
-    username: string,
+  interface Profile {
     'service_name': string,
     /**
      * Includes username
      */
-    'profile_url': string,
+    'profile_url'?: string
+  }
+
+  export interface SocialProfile extends Profile {
+    id?: string,
+    username: string,
+    'profile_url': string
+  }
+
+  export interface GamingProfile extends Profile {
+    id?: string,
+    username?: string
   }
 
 
@@ -98,5 +107,9 @@ declare module 'netux' {
 
   export const social: {
     [ serviceId: string ]: SocialProfile
+  }
+
+  export const gaming: {
+    [ gameId: string ]: GamingProfile
   }
 }
