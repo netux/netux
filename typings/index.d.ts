@@ -30,7 +30,7 @@ declare module 'netux' {
   export enum EducativeInstitutionType {
     Elementary = 'Elementary',
     Secondary = 'Secondary',
-    University = 'University'
+    Tertiary = 'Tertiary'
   }
 
   export interface Date {
@@ -40,9 +40,11 @@ declare module 'netux' {
   }
 
   export interface EducationProfile {
-    building?: string,
-    through: EducativeInstitutionType[],
+    type: EducativeInstitutionType,
+    institution?: string,
+    degree: string,
     since: Partial<Date> & { level: string }
+    to?: Partial<Date> & { level: string }
   }
 
   export interface JobProfile {

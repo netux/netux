@@ -1,21 +1,22 @@
 [
   {
-    "types": [
-      "Elementary",
-      "Secondary"
-    ],
+    "type": "Secondary",
     "since": {
-      "year": 2003,
-      "level": "Green (Elementary)"
+      "year": 2013,
+      "level": "1st Year"
+    },
+    "to": {
+      "year": 2018,
+      "level": "5th Year"
     }
   },
   {
-    "types": [
-      "Secondary"
-    ],
+    "type": "Tertiary",
+    "instituion": "Universidad Tecnologica Nacional",
+    "degree": "Information Systems Engineering",
     "since": {
-      "year": 2011,
-      "level": "5th Grade"
+      "year": 2019,
+      "level": "1st Year"
     }
   }
 ]
