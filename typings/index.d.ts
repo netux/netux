@@ -48,8 +48,8 @@ declare module 'netux' {
   }
 
   export interface JobProfile {
-    building?: string,
-    role?: string,
+    company: string,
+    roles: string[],
     since: Partial<Date>
   }
 
