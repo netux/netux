@@ -1,6 +1,6 @@
 {
   "name": "netux",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Martín \"Netux\" Rodriguez",
   "author": "Martín \"Netux\" Rodriguez",
   "main": "./dist/index.json",
