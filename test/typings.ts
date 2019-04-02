@@ -31,7 +31,7 @@ ${ Object.values(moi.social).length > 0
 Works at:
 ${ moi.jobs.length > 0
   ? moi.jobs.map((jobProfile) =>
-    `- ${ jobProfile.building || 'unknown building' } as ${ jobProfile.role || 'unknown role' } since ${ formatDate(jobProfile.since) }`
+    `- ${ jobProfile.company } as ${ jobProfile.roles.join(', ') } since ${ formatDate(jobProfile.since) }`
   )
   : `nowhere, ${ pronoun.subject } is job-less`
 }
@@ -39,7 +39,7 @@ ${ moi.jobs.length > 0
 Was or is educated at:
 ${ moi.education.length > 0
   ? moi.education.map((educationProfile) =>
-    `- ${ educationProfile.building || 'unknown building' } through ${ educationProfile.through.join(', ') } since ${ formatDate(educationProfile.since) } (where ${ pronoun.subject } started in ${ educationProfile.since.level })`
+    `- ${ educationProfile.type } at ${ educationProfile.institution || '<redacted>' } since ${ formatDate(educationProfile.since) } (where ${ pronoun.subject } started in ${ educationProfile.since.level })${ educationProfile.to ? ` and ended in ${ formatDate(educationProfile.to) } on ${ educationProfile.to.level }` : '' }`
   )
   : `nowhere, ${ pronoun.subject } is uneducated or home-schooled`
 }
