@@ -4,8 +4,9 @@
   "description": "",
   "private": true,
   "dependencies": {
-    "ts-node": "^7.0.1",
-    "typescript": "^3.1.6"
+    "netux": "file:netux-latest.tgz",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.1"
   },
   "scripts": {
     "test-typings": "ts-node ./typings.ts",
