@@ -74,7 +74,7 @@ declare module 'netux' {
 
 
   export const nickname: string
-  
+
   export const website: string
 
   export const name: {
@@ -87,10 +87,9 @@ declare module 'netux' {
    */
   export const languages: string[]
 
-  export const sexual_orientation: {
-    sex: Sex,
-    gender: Gender
-  }
+  export const sex: Sex;
+
+  export const gender: Gender;
 
   export const education: EducationProfile[]
 
