@@ -6,54 +6,50 @@ const Path = require('path')
 const SRC_PATH = Path.resolve(__dirname, 'src')
 const DIST_PATH = Path.resolve(__dirname, 'dist')
 
-function directoryToJson (path) {
+function directoryToJson(path) {
   const result = {}
   const fileNameList = FileSystem.readdirSync(path)
-  const dirName = path.match(/[/\\](.+)$/)[1]
 
   for (let fileName of fileNameList) {
     const filePath = Path.resolve(path, fileName)
     const pathStats = FileSystem.statSync(filePath)
     const fileNameNoExt = fileName.replace(/\..+$/, '')
-    
+
     if (result.hasOwnProperty(fileNameNoExt)) {
-      const errorMsg = [
+      throw new Error([
         `${ fileName } overwrites a previously set \`${ fileNameNoExt }\` property.`,
         `Remove ${ Path.resolve(path, fileNameNoExt) } or ${ Path.resolve(fileName === fileNameNoExt ? `${ fileName }.json` : fileName) } and rebuild.`
-      ]
+      ].join('\n'))
+    }
 
-      throw new Error(errorMsg.join('\n'))
-    } else {
-      if (pathStats.isDirectory()) {
-        result[fileNameNoExt] = directoryToJson(filePath)
-      } else if (pathStats.isFile()) {
-        const contents = FileSystem.readFileSync(filePath, 'utf8')
-        const jsonContents = JSON.parse(contents)
+    if (pathStats.isDirectory()) {
+      result[fileNameNoExt] = directoryToJson(filePath)
+    } else if (pathStats.isFile()) {
+      const contents = FileSystem.readFileSync(filePath, 'utf8')
+      const jsonContents = JSON.parse(contents)
 
-        result[fileNameNoExt] = jsonContents
-      }
+      result[fileNameNoExt] = jsonContents
     }
   }
 
   return result
 }
 
-function writeToPath (path, contents) {
-  const splitPath = path.split(/[/\\]/)
+function mkdirp(path) {
+  /** @type {string} */
+  let traveled = Path.sep
 
-  for (let i in splitPath) {
-    const dirPath = Path.resolve('\\', ... splitPath.slice(0, i))
+  for (const part of path.split(Path.sep).slice(0, -1)) {
+    traveled = Path.join(traveled, part)
 
-    try {
-      FileSystem.statSync(dirPath)
-    } catch (err) {
-      if (err.code === 'ENOENT') {
-        FileSystem.mkdirSync(dirPath)
-      } else {
-        return err
-      }
+    if (!FileSystem.existsSync(traveled)) {
+      FileSystem.mkdirSync(traveled)
     }
   }
+}
+
+function writeToPath(path, contents) {
+  mkdirp(path)
 
   FileSystem.writeFileSync(path, contents, 'utf8')
 }
