@@ -1,5 +1,5 @@
 declare module 'netux' {
-  export enum Month {
+  export const enum Month {
     January = 1,
     February,
     March,
@@ -14,12 +14,12 @@ declare module 'netux' {
     December
   }
 
-  export enum Sex {
+  export const enum Sex {
     Male = 'Male',
     Female = 'Female'
   }
 
-  export enum Gender {
+  export const enum Gender {
     Male = 'Male',
     Female = 'Female',
     AttackHelicopter = 'Attack Helicopter',
@@ -27,7 +27,7 @@ declare module 'netux' {
     Other = 'Other'
   }
 
-  export enum EducativeInstitutionType {
+  export const enum EducativeInstitutionType {
     Elementary = 'Elementary',
     Secondary = 'Secondary',
     Tertiary = 'Tertiary',
