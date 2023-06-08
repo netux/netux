@@ -5,6 +5,10 @@
   "author": "Martín \"Netux\" Rodriguez",
   "main": "./dist/index.json",
   "typings": "./typings/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netux/netux.git"
+  },
   "scripts": {
     "prepare": "npm run build",
     "postinstall": "cat ./dist/index.json",
