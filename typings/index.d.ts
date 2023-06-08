@@ -22,8 +22,7 @@ declare module 'netux' {
   export const enum Gender {
     Male = 'Male',
     Female = 'Female',
-    AttackHelicopter = 'Attack Helicopter',
-    NoBinary = 'No Binary',
+    NonBinary = 'Non Binary',
     Other = 'Other'
   }
 
