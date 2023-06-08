@@ -1,6 +1,5 @@
 import * as moi from 'netux'
 
-
 const pronoun = {
   subject: moi.sex == moi.Sex.Male ? 'he' : 'she',
   object: moi.sex == moi.Sex.Male ? 'him' : 'her'
@@ -8,6 +7,11 @@ const pronoun = {
 
 const formatDate = (date: Partial<moi.Date>) =>
   `${ date.day || '??' }/${ date.month || '??' } / ${ date.year || '??' }`
+
+const formatDiscordUser = (discord: { username: string; discriminator?: number }) =>
+  discord.discriminator == null
+    ? `@${ discord.username }`
+    : `${ discord.username }#${ discord.discriminator }`
 
 
 console.log(`
@@ -18,7 +22,7 @@ Sex: ${ moi.sex }
 Gender: ${ moi.gender }
 Website: ${ moi.website }
 Public email: ${ moi.contact.email }
-Discord: ${ moi.contact.discord.username }#${ moi.contact.discord.discriminator } (${ moi.contact.discord.id })
+Discord: ${ formatDiscordUser(moi.contact.discord) } (${ moi.contact.discord.id })
 
 Social media:
 ${ Object.values(moi.social).length > 0
@@ -33,7 +37,7 @@ ${ moi.jobs.length > 0
   ? moi.jobs.map((jobProfile) =>
     `- ${ jobProfile.company } as ${ jobProfile.roles.join(', ') } since ${ formatDate(jobProfile.since) }`
   )
-  : `nowhere, ${ pronoun.subject } is job-less`
+  : `nowhere, ${ pronoun.subject } is unemployed`
 }
 
 Was or is educated at:
