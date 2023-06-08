@@ -5,11 +5,11 @@
   "private": true,
   "dependencies": {
     "netux": "file:netux-latest.tgz",
-    "ts-node": "^8.0.3",
-    "typescript": "^3.4.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
   },
   "scripts": {
-    "test-typings": "ts-node ./typings.ts",
+    "test-typings": "ts-node ./test.ts",
     "update": "bash update.sh"
   }
 }
