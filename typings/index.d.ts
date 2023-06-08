@@ -30,7 +30,8 @@ declare module 'netux' {
   export enum EducativeInstitutionType {
     Elementary = 'Elementary',
     Secondary = 'Secondary',
-    Tertiary = 'Tertiary'
+    Tertiary = 'Tertiary',
+    University = 'University'
   }
 
   export interface Date {
