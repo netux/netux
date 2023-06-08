@@ -2,7 +2,7 @@
 
 > Martín "Netux" Rodriguez
 
-# usage
+## usage
 
 As a `postinstall` script.
 
@@ -27,10 +27,10 @@ console.log(`${ personName.first } ${ personName.last }`); // => "Martín Rodrig
 
 ```
 
-# credits
+## credits
 
 [@johnkpaul](https://github.com/johnkpaul/johnkpaul), [@bevacqua](https://github.com/bevacqua/bevacqua) and [@joshhunt](https://github.com/bevacqua/bevacqua)
 
-# license
+## license
 
 MIT
