@@ -99,9 +99,9 @@ declare module 'netux' {
   export const contact: {
     email: string[],
     discord: {
-      id: string,
+      id: number,
       username: string,
-      discriminator: string
+      discriminator?: number
     }
   }
 
