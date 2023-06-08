@@ -8,7 +8,8 @@
   "scripts": {
     "prepare": "npm run build",
     "postinstall": "cat ./dist/index.json",
-    "build": "rm -rf ./dist && node bundler.js"
+    "build": "rm -rf ./dist && node bundler.js",
+    "test": "npm run --prefix test/ update && npm run --prefix test/ test-typings"
   },
   "keywords": [
     "person",
