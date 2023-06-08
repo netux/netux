@@ -2,8 +2,8 @@ import * as moi from 'netux'
 
 
 const pronoun = {
-  subject: moi.sexual_orientation.sex == moi.Sex.Male ? 'he' : 'she',
-  object: moi.sexual_orientation.sex == moi.Sex.Male ? 'him' : 'her'
+  subject: moi.sex == moi.Sex.Male ? 'he' : 'she',
+  object: moi.sex == moi.Sex.Male ? 'him' : 'her'
 }
 
 const formatDate = (date: Partial<moi.Date>) =>
@@ -14,8 +14,8 @@ console.log(`
 ----- Profile of ${ moi.name.first } ${ moi.name.last } -----
 Nickname: ${ moi.nickname }
 Birthday: ${ formatDate(moi.birthday) }
-Sex: ${ moi.sexual_orientation.sex }
-Gender: ${ moi.sexual_orientation.gender }
+Sex: ${ moi.sex }
+Gender: ${ moi.gender }
 Website: ${ moi.website }
 Public email: ${ moi.contact.email }
 Discord: ${ moi.contact.discord.username }#${ moi.contact.discord.discriminator } (${ moi.contact.discord.id })
