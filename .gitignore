@@ -1,4 +1,3 @@
 node_modules
-test/netux-*.tgz
 dist/
 yarn-error.log
