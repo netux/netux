@@ -20,12 +20,12 @@ Sex: ${ moi.sex }
 Gender: ${ moi.gender }
 Website: ${ moi.website }
 Public email: ${ moi.contact.email }
-Discord: ${ formatDiscordUser(moi.contact.discord) } (${ moi.contact.discord.id })
+Discord: ${ formatDiscordUser(moi.contact.discord) } (ID ${ moi.contact.discord.id })
 
 Social media:
 ${ Object.values(moi.social).length > 0
   ? Object.values(moi.social).map((socialProfile) =>
-    `- ${ socialProfile.service_name } as ${ socialProfile.username } (${ socialProfile.profile_url })${ socialProfile.id ? `( with ID ${ socialProfile.id })` : '' }`
+    `- ${ socialProfile.service_name } as ${ socialProfile.username } (${ socialProfile.profile_url })${ socialProfile.id ? `(ID ${ socialProfile.id })` : '' }`
   ).join('\n')
   : `nowhere, ${ moi.pronouns.en.subject } is anti-social`
 }
