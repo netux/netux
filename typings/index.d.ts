@@ -91,6 +91,17 @@ declare module 'netux' {
 
   export const gender: Gender;
 
+  /**
+   * Per locale
+   */
+  export const pronouns: {
+    en: {
+      subject: Lowercase<string>,
+      object: Lowercase<string>
+    }
+    // TODO(netux): add pronouns for es-AR
+  };
+
   export const education: EducationProfile[]
 
   export const jobs: JobProfile[]
