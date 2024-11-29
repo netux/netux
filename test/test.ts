@@ -25,9 +25,17 @@ Discord: ${ formatDiscordUser(moi.contact.discord) } (ID ${ moi.contact.discord.
 Social media:
 ${ Object.values(moi.social).length > 0
   ? Object.values(moi.social).map((socialProfile) =>
-    `- ${ socialProfile.service_name } as ${ socialProfile.username } (${ socialProfile.profile_url })${ socialProfile.id ? ` (ID ${ socialProfile.id })` : '' }`
+    `- ${ socialProfile.service_name } as ${ socialProfile.username } (${ socialProfile.profile_url })${ socialProfile.id ? ` (ID ${ socialProfile.id })` : '' }${ socialProfile.inactive ? ` (inactive)` : '' }`
   ).join('\n')
   : `nowhere, ${ moi.pronouns.en.subject } is anti-social`
+}
+
+Gaming profiles:
+${ Object.values(moi.gaming).length > 0
+  ? Object.values(moi.gaming).map((gamingProfile) =>
+    `- ${ gamingProfile.service_name } as ${ gamingProfile.username } (${ gamingProfile.profile_url })${ gamingProfile.id ? ` (ID ${ gamingProfile.id })` : '' }${ gamingProfile.inactive ? ` (inactive)` : '' }`
+  ).join('\n')
+  : `none, ${ moi.pronouns.en.subject } prefers to touch grass`
 }
 
 Works at:
