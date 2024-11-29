@@ -10,6 +10,11 @@ const formatDiscordUser = (discord: { username: string; discriminator?: number }
     ? `@${ discord.username }`
     : `${ discord.username }#${ discord.discriminator }`
 
+const languageNamesMap = {
+  'en': 'English',
+  'es': 'Spanish',
+  'es-AR': 'Spanish (Argentina)'
+}
 
 console.log(`
 ----- Profile of ${ moi.name.first } ${ moi.name.last } -----
@@ -18,6 +23,7 @@ Pronouns: ${ capitalize(moi.pronouns.en.object) }/${ capitalize(moi.pronouns.en.
 Birthday: ${ formatDate(moi.birthday) }
 Sex: ${ moi.sex }
 Gender: ${ moi.gender }
+Languages: ${ moi.languages.map((langCode) => languageNamesMap[langCode] ?? langCode).join(', ') }
 Website: ${ moi.website }
 Public email: ${ moi.contact.email }
 Discord: ${ formatDiscordUser(moi.contact.discord) } (ID ${ moi.contact.discord.id })
