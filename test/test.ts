@@ -25,7 +25,7 @@ Discord: ${ formatDiscordUser(moi.contact.discord) } (ID ${ moi.contact.discord.
 Social media:
 ${ Object.values(moi.social).length > 0
   ? Object.values(moi.social).map((socialProfile) =>
-    `- ${ socialProfile.service_name } as ${ socialProfile.username } (${ socialProfile.profile_url })${ socialProfile.id ? `(ID ${ socialProfile.id })` : '' }`
+    `- ${ socialProfile.service_name } as ${ socialProfile.username } (${ socialProfile.profile_url })${ socialProfile.id ? ` (ID ${ socialProfile.id })` : '' }`
   ).join('\n')
   : `nowhere, ${ moi.pronouns.en.subject } is anti-social`
 }
