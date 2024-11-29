@@ -58,20 +58,19 @@ declare module 'netux' {
     /**
      * Includes username
      */
-    'profile_url'?: string
+    'profile_url'?: string,
+    inactive?: boolean
   }
 
   export interface SocialProfile extends Profile {
     id?: string,
     username: string,
-    'profile_url': string,
-    inactive?: boolean
+    'profile_url': string
   }
 
   export interface GamingProfile extends Profile {
     id?: string,
-    username?: string,
-    inactive?: boolean
+    username?: string
   }
 
 
