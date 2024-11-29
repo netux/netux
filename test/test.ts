@@ -46,12 +46,12 @@ ${ moi.jobs.length > 0
   : `nowhere, ${ moi.pronouns.en.subject } is unemployed`
 }
 
-Was or is educated at:
+Educated at:
 ${ moi.education.length > 0
   ? moi.education.map((educationProfile) =>
     `- ${ educationProfile.type } at ${ educationProfile.institution || '<redacted>' } since ${ formatDate(educationProfile.since) } (where ${ moi.pronouns.en.subject } started in ${ educationProfile.since.level })${ educationProfile.to ? ` and finished in ${ formatDate(educationProfile.to) } on ${ educationProfile.to.level }` : '' }`
   ).join('\n')
-  : `nowhere, ${ moi.pronouns.en.subject } is uneducated or home-schooled`
+  : `nowhere, ${ moi.pronouns.en.subject } has no education or is home-schooled`
 }
 -----------------------------------------------------------------
 `.trim())
