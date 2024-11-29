@@ -2,5 +2,6 @@
   "service_name": "QueUp",
   "profile_url": "https://queup.net/user/netux",
   "username": "netux",
-  "id": "605541fa7391fb0006291907"
+  "id": "605541fa7391fb0006291907",
+  "inactive": true
 }

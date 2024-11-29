@@ -1,5 +1,6 @@
 {
   "service_name": "Reddit",
   "profile_url": "https://reddit.com/user/Netux055",
-  "username": "Netux055"
+  "username": "Netux055",
+  "inactive": true
 }
