@@ -64,12 +64,14 @@ declare module 'netux' {
   export interface SocialProfile extends Profile {
     id?: string,
     username: string,
-    'profile_url': string
+    'profile_url': string,
+    inactive?: boolean
   }
 
   export interface GamingProfile extends Profile {
     id?: string,
-    username?: string
+    username?: string,
+    inactive?: boolean
   }
 
 
