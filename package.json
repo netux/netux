@@ -7,7 +7,7 @@
   "typings": "./typings/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/netux/netux.git"
+    "url": "git+https://github.com/netux/netux.git"
   },
   "scripts": {
     "prepare": "npm run build",
