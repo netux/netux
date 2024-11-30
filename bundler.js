@@ -6,19 +6,19 @@ const path = require('node:path')
 const SRC_PATH = path.resolve(__dirname, 'src')
 const DIST_PATH = path.resolve(__dirname, 'dist')
 
-function directoryToJson(path) {
+function directoryToJson(dirPath) {
   const result = {}
-  const fileNameList = fs.readdirSync(path)
+  const fileNameList = fs.readdirSync(dirPath)
 
   for (let fileName of fileNameList) {
-    const filePath = path.resolve(path, fileName)
+    const filePath = path.resolve(dirPath, fileName)
     const pathStats = fs.statSync(filePath)
     const fileNameNoExt = fileName.replace(/\..+$/, '')
 
     if (result.hasOwnProperty(fileNameNoExt)) {
       throw new Error([
         `${ fileName } overwrites a previously set \`${ fileNameNoExt }\` property.`,
-        `Remove ${ path.resolve(path, fileNameNoExt) } or ${ path.resolve(fileName === fileNameNoExt ? `${ fileName }.json` : fileName) } and rebuild.`
+        `Remove ${ path.resolve(dirPath, fileNameNoExt) } or ${ path.resolve(fileName === fileNameNoExt ? `${ fileName }.json` : fileName) } and rebuild.`
       ].join('\n'))
     }
 
@@ -37,11 +37,11 @@ function directoryToJson(path) {
   return result
 }
 
-function mkdirp(path) {
+function mkdirp(filePath) {
   /** @type {string} */
   let traveled = path.sep
 
-  for (const part of path.split(path.sep).slice(0, -1)) {
+  for (const part of filePath.split(path.sep).slice(0, -1)) {
     traveled = path.join(traveled, part)
 
     if (!fs.existsSync(traveled)) {
@@ -50,10 +50,10 @@ function mkdirp(path) {
   }
 }
 
-function writeToPath(path, contents) {
-  mkdirp(path)
+function writeToPath(filePath, contents) {
+  mkdirp(filePath)
 
-  fs.writeFileSync(path, contents, 'utf8')
+  fs.writeFileSync(filePath, contents, 'utf8')
 }
 
 
